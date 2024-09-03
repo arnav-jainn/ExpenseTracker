@@ -18,7 +18,7 @@ app.use(cors())
 // })
 
 //routes
-readdirSync('./routes').map((route)=> app.use('./api/v1',require('./routes/' + route)))
+readdirSync('./routes').map((route)=> app.use('./api/v1',require('./routes/' + route)))         //SETTING BASE URL
 
 
 const server = () => {

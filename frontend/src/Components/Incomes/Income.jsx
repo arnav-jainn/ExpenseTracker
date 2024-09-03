@@ -1,7 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useGlobalContext } from '../../context/globalContext.jsX'
 
 const Income = () => {
+
+  const {addIncome} = useGlobalContext();
+
   return (
     <IncomeStyle>
         <Inner>

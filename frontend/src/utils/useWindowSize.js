@@ -1,3 +1,5 @@
+// done to get the window size to make orb move through the whole window
+
 import { useEffect, useState } from "react"
 
 

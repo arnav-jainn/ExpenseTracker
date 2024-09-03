@@ -1,7 +1,7 @@
 const express = require("express");
+const router = express.Router();
 const { addIncome, getIncome, deleteIncome } = require("../controllers/income");
 const { addExpense, getExpense, deleteExpense } = require("../controllers/expense");
-const router = express.Router()
 
 
 // router.get('/', (req,res) =>{               //setting routes for backend

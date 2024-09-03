@@ -4,13 +4,19 @@ import bg from './img/bg.png'
 import Orb from './Components/Orb/Orb'
 import Navigation from './Components/Navigation/Navigation'
 import Dashboard from './Components/Dashboard/Dashboard'
-import Incomes from './Components/Income/Income'
+import Incomes from './Components/Incomes/Income'
 import Expenses from './Components/Expenses/Expenses'
+import { useGlobalContext } from './context/globalContext.jsX'
 
 
 const App = () => {
 
   const [active,setActive] = useState(1);
+
+  const orbMemo = useMemo(()=>{         // used to prevent the reset functioning of orb when selecting anything
+    return <Orb />
+  },[])
+
 
   const displayData = () =>{
     switch(active){
@@ -27,12 +33,8 @@ const App = () => {
     }
   }
 
-  const orbMemo = useMemo(()=>{         // used to prevent the reset functioning of orb
-    return <Orb />
-  },[])
-
-
-
+  const global = useGlobalContext();
+  console.log(global);
 
   return (
     <AppStyled bg={bg}>
@@ -64,7 +66,7 @@ const AppStyled = styled.div`
     &::-webkit-scrollbar{
       width: 0;
     }
-  }
+  } 
   
 `
 
