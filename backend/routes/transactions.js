@@ -8,8 +8,8 @@ const { addExpense, getExpense, deleteExpense } = require("../controllers/expens
 //     res.send("hello world")
 // })
 
-router.post('/add-income', addIncome)                //setting endpoint for posting and a method comming from controllers
-    .get('/get-incomes',getIncome)
+router.post('/add-income', addIncome)          //setting endpoint for posting and a method comming from controllers and calling there function
+    .get('/get-income',getIncome)
     .delete('/delete-income/:id',deleteIncome)
     .post('/add-expense',addExpense)
     .get('/get-expense',getExpense)
