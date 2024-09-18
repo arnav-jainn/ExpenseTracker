@@ -11,7 +11,13 @@ const PORT = process.env.PORT                      // setting up the port
   
 //middlewares
 app.use(express.json())                         // to convert the data into json
-app.use(cors())
+app.use(cors(
+    {
+        origin:["https://expense-tracker-jade-kappa.vercel.app/"],
+        methods:["POST","GET"],
+        credentials: true
+    }
+))
 
 // app.get('/', (req,res)=>{                       //to get the home page and check server working or not throught postman
 //     res.send('hello world')                     //sending reponse once we get to the home page 
