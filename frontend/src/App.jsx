@@ -77,9 +77,5 @@ const MainContainer = styled.div`
     gap: 2rem;
 `
 
-const Inner = styled.div`
-    padding: 2rem 1.5rem;
-    width: 100%;
-`
 
-
+ 
