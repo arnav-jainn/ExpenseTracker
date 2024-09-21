@@ -3,7 +3,7 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
 
-const BASE_URL = "https://expense-tracker-backend-mocha.vercel.app/";
+const BASE_URL = "https://expense-tracker-backend-mocha.vercel.app";
 
 const GlobalContext = React.createContext();
 
@@ -73,17 +73,17 @@ export const GlobalProvider = ({ children }) => {
   };
 
   const totalBalance = () => {
-    return totalIncome() - totalExpense()
-  }
+    return totalIncome() - totalExpense();
+  };
 
   const transactionHistory = () => {
-    const history = [...incomes, ...expenses]
+    const history = [...incomes, ...expenses];
     history.sort((a, b) => {
-        return new Date(b.createdAt) - new Date(a.createdAt)
-    })
+      return new Date(b.createdAt) - new Date(a.createdAt);
+    });
 
-    return history.slice(0, 3)
-}
+    return history.slice(0, 3);
+  };
 
   return (
     <GlobalContext.Provider
@@ -101,7 +101,7 @@ export const GlobalProvider = ({ children }) => {
         totalBalance,
         transactionHistory,
         error,
-        setError
+        setError,
       }}
     >
       {children}
