@@ -6,7 +6,7 @@ import Navigation from './Components/Navigation/Navigation'
 import Dashboard from './Components/Dashboard/Dashboard'
 import Incomes from './Components/Incomes/Income'
 import Expenses from './Components/Expenses/Expenses'
-import { useGlobalContext } from './context/globalContext.jsX'
+import { useGlobalContext } from './context/globalContext.jsx'
 
 
 const App = () => {
