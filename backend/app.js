@@ -13,7 +13,7 @@ const PORT = process.env.PORT                      // setting up the port
 app.use(express.json())                         // to convert the data into json
 app.use(cors(
     {
-        origin:["https://expense-tracker.arnavjainn.me/"],
+        origin:["https://expense-tracker.arnavjainn.me"],
         methods:["POST","GET"],
         credentials: true
     }
