@@ -3,7 +3,7 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
 
-const BASE_URL = "https://expense-tracker-backend-mocha.vercel.app";
+const BASE_URL = "https://expense-tracker-backend-sage.vercel.app/";
 
 const GlobalContext = React.createContext();
 
