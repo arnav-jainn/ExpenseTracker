@@ -6,25 +6,19 @@ const app = express()                               // app is being used to call
 
 
 require('dotenv').config()                          // requires to import env
-const PORT = process.env.PORT                      // setting up the port
+const PORT = process.env.PORT                    // setting up the port
 
   
 //middlewares
 app.use(express.json())                         // to convert the data into json
-app.use(cors(
-    {
-        origin:["*"],
-        methods:["POST","GET"],
-        credentials: true
-    }
-))
+app.use(cors())
 
-// app.get('/', (req,res)=>{                       //to get the home page and check server working or not throught postman
-//     res.send('hello world')                     //sending reponse once we get to the home page 
-// })
+app.get('/', (req,res)=>{                       //to get the home page and check server working or not throught postman
+    res.send('hello world')                     //sending reponse once we get to the home page 
+})
 
 //routes
-readdirSync('./routes').map((route)=> app.use(require('./routes/' + route)))      //SETTING BASE API
+readdirSync('./routes').map((route)=> app.use('/api/v1', require('./routes/' + route)))      //SETTING BASE API
 
 
 const server = () => {

@@ -3,7 +3,7 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
 
-const BASE_URL = "https://expense-tracker-backend-sage.vercel.app";
+const BASE_URL = "http://localhost:5001/api/v1";
 
 const GlobalContext = React.createContext();
 
